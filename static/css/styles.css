@@ -30,19 +30,7 @@ html {
 
 /* Section specific CSS http://brand.cornell.edu/color.php */
 
-.intro-section {
-    height: 100%;
-    padding-top: 100px;
-    /*text-align: center;*/
-}
-
-.services-section {
-    height: 100%;
-    padding-top: 100px;
-    /*text-align: center;*/
-}
-
-.contact-section {
+.sub-section {
     height: 100%;
     padding-top: 100px;
     /*text-align: center;*/
