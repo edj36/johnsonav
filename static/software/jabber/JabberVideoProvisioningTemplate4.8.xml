@@ -1,0 +1,393 @@
+<provisioningTemplate type="movi" version="4.8">
+  <element key="presenceUrl" mapToKey="Services/Presence/URL" name="Presence Server URI" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="publicPresenceUrl" commonKey="presenceUrl" mapToKey="Services/Presence/URL" name="Public Presence Server URI" type="String" connectivity="1">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="webServiceAddress" mapToKey="Services/WebService/URL" name="Web Service URL" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="webServiceUsername" mapToKey="Services/WebService/AuthUsername" name="Web Service Username" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="webServicePassword" mapToKey="Services/WebService/AuthPassword" name="Web Service Password" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="sipServerAddress" mapToKey="Services/Sip/URL" name="SIP Server Address" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="AuthUsername" mapToKey="Services/Sip/AuthUsername" name="SIP Authentication Username" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="AuthPassword" mapToKey="Services/Sip/AuthPassword" name="SIP Authentication Password" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="publicSipServerAddress" commonKey="sipServerAddress" mapToKey="Services/Sip/URL" name="Public SIP Server Address" type="String" connectivity="1">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="sipKeepAliveInterval" mapToKey="Services/Sip/KeepAliveInterval" name="SIP Keep Alive Interval" type="Integer" connectivity="0">
+    <valuespace>
+      <min>10</min>
+      <max>65534</max>
+    </valuespace>
+  </element>
+  <element key="sipUri" mapToKey="Services/Sip/SignOnUri" name="SIP URI" type="String" connectivity="0" editable="false">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="listeningPort" mapToKey="Services/Sip/ListeningPort" name="SIP Listening Port" type="Integer" connectivity="0">
+    <valuespace>
+      <min>0</min>
+      <max>65535</max>
+    </valuespace>
+  </element>
+  <element key="encryptionPolicy" mapToKey="Services/Encryption" name="Encryption Policy" type="Literal" connectivity="0">
+    <valuespace>
+      <value>Auto</value>
+      <value>AutoNoSrtp</value>
+      <value>ForceTlsForceSrtp</value>
+      <value>ForceTlsAutoSrtp</value>
+      <value>ForceTlsNoSrtp</value>
+      <value>ForceTcpNoSrtp</value>
+    </valuespace>
+  </element>
+  <element key="corporateDirectoryUrl" mapToKey="Services/PhoneBook/URL" name="Phone Book Server URI" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="publicCorporateDirectoryUrl" commonKey="corporateDirectoryUrl" mapToKey="Services/PhoneBook/URL" name="Public Phone Book Server URI" type="String" connectivity="1">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="corporateDirectoryType" mapToKey="Services/PhoneBook/ServerType" name="Phone Book Server Type" type="Literal" connectivity="0">
+    <valuespace>
+      <value>VCS</value>
+      <value>Callway</value>
+    </valuespace>
+  </element>
+  <element key="corporateDirectoryUsername" mapToKey="Services/PhoneBook/AuthUsername" name="Phone Book Auth Username" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="corporateDirectoryPassword" mapToKey="Services/PhoneBook/AuthPassword" name="Phone Book Auth Password" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="EnableMnsMode" mapToKey="Services/Sip/EnableMnsMode" name="MNS Mode" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+  <element key="ClearPath" mapToKey="Services/ClearPath" name="ClearPath" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>  
+  <element key="DefaultMediaCandidateType" mapToKey="Services/Sip/DefaultMediaCandidateType" name="Default Mediatype Candidate" type="Literal" connectivity="0">
+    <valuespace>
+      <value>Host</value>
+      <value>Rflx</value>
+      <value>Relay</value>
+    </valuespace>
+  </element>
+  <element key="PublicDefaultMediaCandidateType" commonKey="DefaultMediaCandidateType" mapToKey="Services/Sip/DefaultMediaCandidateType" name="Public Default Mediatype Candidate" type="Literal" connectivity="1">
+    <valuespace>
+      <value>Relay</value>
+      <value>Rflx</value>
+      <value>Host</value>
+    </valuespace>
+  </element>
+  <element key="TurnServer" mapToKey="Services/Sip/TurnServer" name="TurnServer" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="EnableIce" mapToKey="Services/Sip/EnableIce" name="ICE" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+  <element key="TurnAuthUsername" mapToKey="Services/Sip/TurnAuthUsername" name="TurnAuthUsername" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="TurnAuthPassword" mapToKey="Services/Sip/TurnAuthPassword" name="TurnAuthPassword" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="TcpMediaRelay" mapToKey="Services/Sip/TcpMediaRelay" name="Tcp Media Relay" type="Literal" connectivity="0">
+    <valuespace>
+      <value>Auto</value>
+      <value>Off</value>
+      <value>Force</value>
+    </valuespace>
+  </element>
+  <element key="DetectMediaMangling" mapToKey="Services/Sip/DetectMediaMangling" name="Detect Media Mangling" type="Literal" connectivity="0">
+    <valuespace>
+      <value>On</value>
+      <value>Off</value>
+    </valuespace>
+  </element>
+  <element key="EnableH224" mapToKey="Services/Sip/EnableH224" name="Far End Camera Control" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+  <element key="EnableOutbound" mapToKey="Services/Sip/EnableOutbound" name="Multiple Server Connections" type="Literal" connectivity="0">
+    <valuespace>
+      <value>On</value>
+      <value>Off</value>
+    </valuespace>
+  </element>
+  <element key="publicEnableOutbound" mapToKey="Services/Sip/EnableOutbound" name="Public Multiple Server Connections" type="Literal" connectivity="1">
+      <valuespace>
+          <value>on</value>
+          <value>off</value>
+      </valuespace>
+  </element>
+  <element key="IpVersion" mapToKey="Services/Sip/IpVersion" name="IP Version" type="Literal" connectivity="0">
+    <valuespace>
+      <value>Auto</value>
+      <value>4</value>
+      <value>6</value>
+    </valuespace>
+  </element>
+  <element key="externalIpVersion" mapToKey="Services/Sip/IpVersion" name="Public IP Version" type="Literal" connectivity="1">
+    <valuespace>
+      <value>Auto</value>
+      <value>4</value>
+      <value>6</value>
+    </valuespace>
+  </element>
+  <element key="EnableXmpp" mapToKey="Services/Xmpp/Enable" name="Cloud Services (xmpp)" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+  <element key="XmppServer" mapToKey="Services/Xmpp/Server" name="XMPP Server"  type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="XmppJid" mapToKey="Services/Xmpp/Jid" name="XMPP JID"  type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="displayName" mapToKey="Configuration/DisplayName" name="Display Name" type="String" connectivity="0" editable="false">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="findMeUri" mapToKey="Configuration/FindMeUri" name="FindMe URI" type="String" connectivity="0" editable="false">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="resolutionPreferences" mapToKey="Configuration/ResolutionPreferences" name="Resolution Preferences" type="Literal" connectivity="0">
+    <valuespace>
+      <value>High</value>
+      <value>Medium</value>
+      <value>Low</value>
+    </valuespace>
+  </element>
+  <element key="maxInBandwidth" mapToKey="Configuration/MaxInBandwidth" name="Maximum In Bandwidth" type="Integer" connectivity="0">
+    <valuespace>
+      <min>32</min>
+      <max>65535</max>
+    </valuespace>
+  </element>
+  <element key="publicMaxInBandwidth" commonKey="maxInBandwidth" mapToKey="Configuration/MaxInBandwidth" name="Public Maximum In Bandwidth" type="Integer" connectivity="1">
+    <valuespace>
+      <min>32</min>
+      <max>65535</max>
+    </valuespace>
+  </element>
+  <element key="maxOutBandwidth" mapToKey="Configuration/MaxOutBandwidth" name="Maximum Out Bandwidth" type="Integer" connectivity="0">
+    <valuespace>
+      <min>32</min>
+      <max>65535</max>
+    </valuespace>
+  </element>
+  <element key="publicMaxOutBandwidth" commonKey="maxOutBandwidth" mapToKey="Configuration/MaxOutBandwidth" name="Public Maximum Out Bandwidth" type="Integer" connectivity="1">
+    <valuespace>
+      <min>32</min>
+      <max>65535</max>
+    </valuespace>
+  </element>
+  <element key="mediaPortRangeStart" mapToKey="Configuration/MediaPortRangeStart" name="Media Port Range Start" type="Integer" connectivity="0">
+    <valuespace>
+      <min>1024</min>
+      <max>65534</max>
+    </valuespace>
+  </element>
+  <element key="mediaPortRangeEnd" mapToKey="Configuration/MediaPortRangeEnd" name="Media Port Range End" type="Integer" connectivity="0">
+    <valuespace>
+      <min>1024</min>
+      <max>65534</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationSIPProfileMultiWayConference" mapToKey="Configuration/MultiWayConference" name="Multiway Participant URI" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <!-- Bandwith Prober -->
+  <element key="bandwidthProberTime" mapToKey="Configuration/BandwidthProberTime" name="Bandwidth Prober Time" type="Integer" connectivity="0">
+    <valuespace>
+      <min>5</min>
+      <max>65534</max>
+    </valuespace>
+  </element>
+  <element key="bandwidthProberAutoScheduling" mapToKey="Configuration/BandwidthProberAutoScheduling" name="Bandwidth Prober Auto Scheduling" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+  <element key="publicBandwidthProberAutoScheduling" commonKey="bandwidthProberAutoScheduling" mapToKey="Configuration/BandwidthProberAutoScheduling" name="Public Bandwidth Prober Auto Scheduling" type="Literal" connectivity="1">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+  <element key="logUrl" mapToKey="Configuration/LogUrl" name="http Log URL" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>1024</max>
+    </valuespace>
+  </element>
+  <element key="inviterContact" mapToKey="Configuration/InviterContact" name="Inviter Contact URI" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <!-- Configuration of local help URLs -->
+  <element key="helpUrl" mapToKey="Configuration/HelpUrl" name="Help URL" type="String" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>1024</max>
+    </valuespace>
+  </element>
+  <element key="turnFallbackTimeout" mapToKey="Configuration/TurnFallbackTimeout" name="Turn Fallback Timeout" type="Integer" connectivity="0">
+    <valuespace>
+      <min>1</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <!-- Software Upgrade -->
+  <element key="OsxSoftware" mapToKey="Software/Url/Osx" name="OS X Software URL" type="String" connectivity="0">
+    <valuespace>
+      <min>0</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="WinSoftware" mapToKey="Software/Url/Win" name="Windows Software URL" type="String" connectivity="0">
+    <valuespace>
+      <min>0</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="OsxSoftwareVersion" mapToKey="Software/Version/Osx" name="OS X Software Version" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>100</max>
+    </valuespace>
+  </element>
+  <element key="WinSoftwareVersion" mapToKey="Software/Version/Win" name="Windows Software Version" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>100</max>
+    </valuespace>
+  </element>
+  <element key="ServiceUpgradeUrl" mapToKey="Services/WebService/UpgradeUrl" name="Service Upgrade Url" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="ServiceUpgradeBannerUrl" mapToKey="Services/WebService/UpgradeBannerUrl" name="Service Upgrade Banner Url" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="ServiceInviteUrl" mapToKey="Services/WebService/InviteUrl" name="Service Invite Url" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  <element key="DisableAacld" mapToKey="Configuration/DisableAacld" name="Disable audio AACLD codec" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+  <element key="H224SelectsSrc" mapToKey="Configuration/H224SelectsSrc" name="Far End Camera Control Selects Source" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+  <element key="SupportAes256Srtp" mapToKey="Services/Sip/SupportAes256Srtp" name="Support AES-256 in SRTP" type="Literal" connectivity="0">
+    <valuespace>
+      <value>on</value>
+      <value>off</value>
+    </valuespace>
+  </element>
+</provisioningTemplate>

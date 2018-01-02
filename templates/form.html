@@ -1,0 +1,105 @@
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Please use the following form to submit a request to AV</p>
+            </div>
+            <form class="form-horizontal" action="." method="POST">
+                <div class="form-group">
+                    <label for="input_requester_email" class="col-sm-2 control-label">Your Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" name="input_requester_email" id="input_requester_email" placeholder="abc123@cornell.edu">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input_date" class="col-sm-2 control-label">Date of Event</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" name="input_date" id="input_date" placeholder="MM/DD/YYYY">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input_start_time" class="col-sm-2 control-label">Start Time</label>
+                    <div class="col-sm-10">
+                        <input type="time" class="form-control" name="input_start_time" id="input_start_time" placeholder="6:00 AM">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input_end_time" class="col-sm-2 control-label">End Time</label>
+                    <div class="col-sm-10">
+                        <input type="time" class="form-control" name="input_end_time" id="input_end_time" placeholder="6:00 AM">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input_event_type" class="col-sm-2 control-label">Service</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" name="input_event_type" id="input_event_type">
+                            <option>Click to select</option>
+                            <option>Beam</option>
+                            <option>Briefing</option>
+                            <option>Equipment sign-out</option>
+                            <option>MediaSite recording</option>
+                            <option>Monitor</option>
+                            <option>Panopto recording</option>
+                            <option>Video conference</option>
+                            <option>Other (specify below)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input_comments" class="col-sm-2 control-label">Comments</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" name="input_comments" id="input_comments" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label> <input type="checkbox" name="input_send_copy" id="input_send_copy"> Send me a copy of my responses. </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <!--<button type="submit" 
+                        id="submit_button"
+                        class="btn btn-default" 
+                        onclick="sendEmail()">Submit</button>-->
+                        <!--<button type="submit" id="submit_button" class="btn btn-default">Submit</button>-->
+                        <input type="submit" name="submit_button" id="submit_button" class="btn btn-default"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- old 
+
+    <script>
+        document.getElementById("submit_button").addEventListener("click", sendEmail);
+
+        function sendEmail() {
+        console.log("button clicked")
+        var requestEmail = document.getElementById("input_requester_email").value;
+        var requestDate = document.getElementById("input_date").value;
+        var requestStartTime = document.getElementById("input_start_time").value;
+        var requestEndTime = document.getElementById("input_end_time").value;
+        var requestService = document.getElementById("input_event_type").value;
+        var requestComments = document.getElementById("input_comments").value;
+        var requestSendCopy = document.getElementById("input_send_copy").checked;
+
+        console.log(requestEmail);
+        console.log(requestDate);
+        console.log(requestStartTime);
+        console.log(requestEndTime);
+        console.log(requestService);
+        console.log(requestComments);
+        console.log(requestSendCopy);
+        alert("Email sent successfully! \nWe will be in touch soon.");
+        }
+
+
+    </script>
+
+--> 
