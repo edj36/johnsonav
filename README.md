@@ -13,6 +13,8 @@ Once you have anaconda python or whatever python you want (as long as it's versi
 pip install -r requirements.txt
 ```
 
+If you use `pip` to install something for this project, use `pip freeze` to find the exact version of what you installed (and its sub-projects) and add those to the requirements.txt.
+
 # Deployment
 
 Push to git as usual:

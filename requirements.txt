@@ -6,6 +6,5 @@ itsdangerous==0.24
 Werkzeug==0.11.15
 certifi==2017.11.5
 chardet==3.0.4
-distribute==0.6.24
 gunicorn==19.7.1
 requests==2.18.4
