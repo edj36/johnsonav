@@ -22,6 +22,8 @@ git push -u origin master
 
 Push to heroku:
 
+(need to sign into heroku and have cli tools on your machine)
+
 First make sure to run 
 ```
 heroku git:remote -a johnsonav
