@@ -13,6 +13,24 @@ Once you have anaconda python or whatever python you want (as long as it's versi
 pip install -r requirements.txt
 ```
 
+# Deployment
+
+Push to git as usual:
+```
+git push -u origin master
+```
+
+Push to heroku:
+
+First make sure to run 
+```
+heroku git:remote -a johnsonav
+```
+and then 
+```
+git push heroku master
+```
+
 # TODO 
 
 - virtualenv for dependency management
