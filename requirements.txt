@@ -8,3 +8,4 @@ certifi==2017.11.5
 chardet==3.0.4
 gunicorn==19.7.1
 requests==2.18.4
+WTForms==2.1

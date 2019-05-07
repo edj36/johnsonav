@@ -1,8 +1,4 @@
-# Johnson Audio Visual Services Website
-
-Website for students and faculty at Cornell's Johnson School of Management to utilize services provided by the Audio-Visual team. 
-
-By Eric Johnson
+# UPDATE: THIS PROJECT IS NO LONGER MAINTAINED, IT WAS A PERSONAL PROJECT THAT I WAS BUILDING TO AUTOMATE MY ON-CAMPUS JOB, IT IS NOT ASSOCIATED WITH CORNELL UNIVERSITY IN ANY WAY
 
 # Installation
 
